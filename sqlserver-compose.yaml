@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - SA_PASSWORD=Password123!   # Cambia a una contraseña segura
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Developer
+    ports:
+      - 1433:1433
+    volumes:
+      - /Users/jeffersonsandoval/Projects/sqlServerVolume:/var/opt/mssql/data

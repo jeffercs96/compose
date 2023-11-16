@@ -1,1 +1,1 @@
-primer cambio
+docker-compose -f <nombre>.yaml up -d
